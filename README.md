@@ -1,17 +1,5 @@
-# 🌟 Advanced MERN B2B Teams Project Management SaaS - *TeamSync*  
+# 🌟 Project Management App
 
-## 🎥 Watch the Full Video on YouTube  
-**[Subscribe to the Channel](https://tinyurl.com/subcribe-to-techwithEmma)** to stay updated with more exciting projects and tutorials!  
-
----
-
-## ❤️ Support the Channel
-If you love this project and want to see more, consider supporting the channel:
-- Give this repository a ⭐️ on GitHub.
-- **[Buy Me a Coffee](https://www.buymeacoffee.com/techwithemmaofficial)** to help fund more educational content.  
-- Like, share, and subscribe to the channel for more tutorials and updates!
-
----
 
 ## 📌 Project Overview  
 
@@ -72,8 +60,8 @@ GOOGLE_CLIENT_ID=<your-google-client-id>
 GOOGLE_CLIENT_SECRET=<your-google-client-secret>  
 GOOGLE_CALLBACK_URL=http://localhost:8000/api/auth/google/callback
 
-FRONTEND_ORIGIN=http://localhost:3000
-FRONTEND_GOOGLE_CALLBACK_URL=http://localhost:3000/google/callback
+FRONTEND_ORIGIN=http://localhost:5173
+FRONTEND_GOOGLE_CALLBACK_URL=http://localhost:5173/google/callback
 ```  
 
 ### 3. Run the Application  
@@ -89,36 +77,10 @@ Access the backend at `http://localhost:8000`.
 
 ---
 
-## 🌐 Deploying TeamSync  
+## 🌐 Deploying Team Management App  
 
 ### 1. Add Environment Variables  
 Add the `.env` variables to your hosting platform (e.g., Vercel).  
 
 ### 2. Deploy  
 Deploy your app using your preferred method to make it live.  
-
----
-
-## 📚 Comprehensive Guide  
-
-**🚀 Deepen Your Understanding!**  
-We’ve developed an all-encompassing guide for this project that explains:  
-
-- The architecture and design principles behind TeamSync  
-- Step-by-step breakdowns of each feature  
-- Advanced techniques for implementing seeding, Mongoose transactions, and performance optimizations  
-- Insights into multi-tenancy and role-based permission models  
-- Best practices for building scalable SaaS applications  
-
-This guide ensures you gain a thorough understanding of every concept and feature in TeamSync, empowering you to build similar systems or expand upon this project.  
-
-**💡 Ready to learn more?** Check out the full guide now—**[link in the description!](#)**  
-
----
-
-### 📺 Like, Share & Subscribe  
-
-Don’t miss out! **[Subscribe to the Channel](https://tinyurl.com/subcribe-to-techwithEmma)** for more amazing content and exciting projects.  
-
-Now, let’s dive into the demo of **TeamSync**! 🚀
-
