@@ -152,6 +152,7 @@ export const registerUserService = async (body: {
     let ownerRole = await RoleModel.findOne({
       name: Roles.OWNER,
     }).session(session);
+    console.log(ownerRole)
 
     if (!ownerRole) {
       console.warn("Owner role not found, creating it...");
@@ -159,6 +160,7 @@ export const registerUserService = async (body: {
         name: Roles.OWNER,
         permissions: RolePermissions[Roles.OWNER] || ['all']
       }], { session });
+      console.log(ownerRole);
     }
 
     // 6. Create member relationship
@@ -168,6 +170,7 @@ export const registerUserService = async (body: {
       role: ownerRole._id,
       joinedAt: new Date(),
     }], { session });
+
 
     // 7. Set user's current workspace
     await UserModel.findByIdAndUpdate(

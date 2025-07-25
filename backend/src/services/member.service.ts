@@ -8,6 +8,7 @@ import {
   NotFoundException,
   UnauthorizedException,
 } from "../utils/appError";
+import { RolePermissions } from "../utils/role-permission";
 
 export const getMemberRoleInWorkspace = async (
   userId: string,
@@ -55,10 +56,15 @@ export const joinWorkspaceByInviteService = async (
     throw new BadRequestException("You are already a member of this workspace");
   }
 
-  const role = await RoleModel.findOne({ name: Roles.MEMBER });
+  let role = await RoleModel.findOne({ name: Roles.MEMBER });
 
   if (!role) {
-    throw new NotFoundException("Role not found");
+    [role] = await RoleModel.create([{
+        name: Roles.MEMBER,
+        permissions: RolePermissions[Roles.MEMBER]
+      }]);
+      console.log(role);
+
   }
 
   // Add user to workspace as a member
