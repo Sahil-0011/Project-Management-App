@@ -9,9 +9,7 @@ import TaskModel from "../models/task.model";
 import { TaskStatusEnum } from "../enums/task.enum";
 import ProjectModel from "../models/project.model";
 
-//********************************
-// CREATE NEW WORKSPACE
-//**************** **************/
+
 export const createWorkspaceService = async (
   userId: string,
   body: {
@@ -58,9 +56,6 @@ export const createWorkspaceService = async (
   };
 };
 
-//********************************
-// GET WORKSPACES USER IS A MEMBER
-//**************** **************/
 export const getAllWorkspacesUserIsMemberService = async (userId: string) => {
   const memberships = await MemberModel.find({ userId })
     .populate("workspaceId")
@@ -94,9 +89,6 @@ export const getWorkspaceByIdService = async (workspaceId: string) => {
   };
 };
 
-//********************************
-// GET ALL MEMEBERS IN WORKSPACE
-//**************** **************/
 
 export const getWorkspaceMembersService = async (workspaceId: string) => {
   // Fetch all members of the workspace
@@ -173,9 +165,7 @@ export const changeMemberRoleService = async (
   };
 };
 
-//********************************
-// UPDATE WORKSPACE
-//**************** **************/
+
 export const updateWorkspaceByIdService = async (
   workspaceId: string,
   name: string,
