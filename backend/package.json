@@ -6,7 +6,7 @@
   "scripts": {
     "seed": "ts-node src/seeders/role.seeder.ts",
     "dev": "ts-node-dev --files src/index.ts",
-    "build": "tsc && cp /package.json ./dist",
+    "build": "tsc && copyfiles package.json dist",
     "start": "node dist/index.js"
   },
   "keywords": [],
@@ -15,6 +15,7 @@
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cookie-session": "^2.1.0",
+    "copyfiles": "^2.4.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
