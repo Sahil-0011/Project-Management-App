@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
- "scripts": {
-  "prebuild": "npm install --include=dev",
+"scripts": {
+  "render-build": "npm install --production=false && npm run build",
   "build": "npx rimraf dist && tsc && npx copyfiles package.json dist",
-  "render-build": "npm install && npm run build",
   "start": "node dist/index.js",
-  "postinstall": "npm run prebuild"
+  "postinstall": "npm run build"
 },
   "keywords": [],
   "author": "",
